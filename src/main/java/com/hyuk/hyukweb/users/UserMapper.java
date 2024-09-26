@@ -8,5 +8,5 @@ public interface UserMapper {
 
     int insertUser(UserEntity userEntity);
 
-    UserEntity selectUserById(@Param(value = "userid")String userid);
+    UserEntity selectUserById(@Param(value ="userid")String userid);
 }

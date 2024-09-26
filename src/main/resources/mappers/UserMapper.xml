@@ -14,13 +14,15 @@
     </insert>
 
     <select id= "selectUserById"
-        resultType="com.hyuk.hyukweb.users.UserEntity">
-        SELECT `userid` as`userid`,
-               `password` as `password`,
-               `name` as `name`,
-               `age` as `age`
+        resultType="com.hyuk.hyukweb.users.UserEntity"
+        parameterType="String">
+        SELECT `userid`     as `userid`,
+               `password`   as `password`,
+               `name`       as `name`,
+               `age`        as `age`
         FROM `hyukweb`.`users`
         WHERE binary `userid` = #{userid}
         LIMIT 1
     </select>
+
 </mapper>

@@ -22,5 +22,37 @@ public class UserService {
         return this.userMapper.insertUser(user) > 0 ?
                 RegisterResult.SUCCESS : RegisterResult.FAILURE;
     }
+//    public LoginResult login(UserEntity user) {
+//        UserEntity existingUser = this.userMapper.selectUserById(user.getUserid());
+//        if(existingUser == null) {
+//            return LoginResult.FAILURE_id;
+//        }
+//        user.setPassword(CryptoUtil.hashSha512(user.getPassword()));
+//        if(!user.getPassword().equals(existingUser.getPassword())) {
+//            return LoginResult.FAILURE_pw;
+//        }
+//        user.setUserid(existingUser.getUserid());
+//        user.setName(existingUser.getName());
+//        user.setAge(existingUser.getAge());
+//        return LoginResult.SUCCESS;
+//    }
+public LoginResult login(UserEntity user) {
+    UserEntity existingUser = this.userMapper.selectUserById(user.getUserid());
+    if (existingUser == null) {
+        System.out.println("User not found: " + user.getUserid());
+        return LoginResult.FAILURE_id;
+    }
+    System.out.println("Existing user found: " + existingUser.getUserid());
+
+    user.setPassword(CryptoUtil.hashSha512(user.getPassword()));
+    if (!user.getPassword().equals(existingUser.getPassword())) {
+        return LoginResult.FAILURE_pw;
+    }
+    user.setUserid(existingUser.getUserid());
+    user.setName(existingUser.getName());
+    user.setAge(existingUser.getAge());
+    return LoginResult.SUCCESS;
+}
+
 
 }

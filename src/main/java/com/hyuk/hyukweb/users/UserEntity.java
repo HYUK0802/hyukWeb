@@ -16,7 +16,7 @@ public class UserEntity {
 
     public String name;
 
-    public String age;
+    public int age;
 
 
 
