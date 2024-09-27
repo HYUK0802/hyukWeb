@@ -13,6 +13,8 @@ loginForm.onsubmit = e => {
     }
     const xhr = new XMLHttpRequest();
     const formData = new FormData();
+    formData.append('userid', loginForm['userid'].value);
+    formData.append('password', loginForm['password'].value);
     xhr.open('POST','/login' );
     xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -20,8 +22,7 @@ loginForm.onsubmit = e => {
         }
             if (xhr.status >= 200 && xhr.status < 300 ) {
             const responseObject = JSON.parse(xhr.responseText);
-                alert(id)
-                switch (responseObject.result){
+            switch (responseObject.result){
                 case 'failure_id':
                     alert("아이디가 올바르지 않습니다.");
                     loginForm['userid'].focus();
