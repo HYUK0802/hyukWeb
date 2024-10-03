@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 작성</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">게시물 작성</h1>
+    <form>
+        <div class="form-group">
+            <label for="postTitle">제목</label>
+            <input type="text" class="form-control" id="postTitle" placeholder="게시물 제목을 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="postContent">내용</label>
+            <textarea class="form-control" id="postContent" rows="5" placeholder="게시물 내용을 입력하세요"></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">게시물 작성</button>
+            <a href="board" class="btn btn-secondary">취소</a>
+        </div>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

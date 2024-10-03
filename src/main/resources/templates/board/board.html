@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .post {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .post-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .post-content {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">게시판</h1>
+    <div class="post">
+        <div class="post-title">첫 번째 게시물</div>
+        <div class="post-meta">작성자: 홍길동 | 날짜: 2024-09-30</div>
+        <div class="post-content">이것은 첫 번째 게시물의 내용입니다. 많은 사람들이 이 게시물을 읽어보길 바랍니다.</div>
+    </div>
+    <div class="post">
+        <div class="post-title">두 번째 게시물</div>
+        <div class="post-meta">작성자: 김철수 | 날짜: 2024-09-29</div>
+        <div class="post-content">두 번째 게시물의 내용이 여기 있습니다. 흥미로운 정보가 많습니다.</div>
+    </div>
+    <div class="text-center">
+        <a href="write"><button class="btn btn-primary">새 게시물 작성</button></a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
