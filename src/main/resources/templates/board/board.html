@@ -14,19 +14,25 @@
 <!-- Top Bar -->
 <div class="top-bar">
     <div class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+                <rect width="120" height="40" rx="8" fill="#000000"></rect>
+                <text x="20" y="27" font-family="Arial, sans-serif" font-size="18" fill="white" font-weight="bold">
+                    HyukWeb
+                </text>
+            </svg>
+        </a>
     </div>
     <div class="search-bar">
         <input type="text" placeholder="Search">
         <button>🔍</button>
     </div>
-    <div class="user-options">
-        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar">
-    </div>
+
 </div>
 
 <!-- Sidebar -->
 <div class="sidebar">
+    <a href ="/login"><li><span>로그인</span></li></a>
     <ul>
         <li><span>김재혁</span></li>
         <li><span>1998.08.02</span></li>
@@ -45,7 +51,7 @@
 
         <!-- Post 1 -->
         <div class="post">
-            <div class="post-thumbnail" style="background-image: url('https://via.placeholder.com/300x180');"></div>
+<!--            <div class="post-thumbnail" style="background-image: url('https://via.placeholder.com/300x180');"></div>-->
             <div class="post-content">
                 <div class="post-title">Exciting Post Title 1</div>
                 <div class="post-description">This is a brief description for the first post. It gives a sneak peek into the content and what to expect.</div>
@@ -60,7 +66,6 @@
 
         <!-- Post 2 -->
         <div class="post">
-            <div class="post-thumbnail" style="background-image: url('https://via.placeholder.com/300x180');"></div>
             <div class="post-content">
                 <div class="post-title">Amazing Post Title 2</div>
                 <div class="post-description">Short description of the second post. It provides a quick insight into what this post is about.</div>
@@ -75,7 +80,6 @@
 
         <!-- Post 3 -->
         <div class="post">
-            <div class="post-thumbnail" style="background-image: url('https://via.placeholder.com/300x180');"></div>
             <div class="post-content">
                 <div class="post-title">Interesting Post Title 3</div>
                 <div class="post-description">This third post provides some exciting content and a teaser of what readers can expect.</div>
@@ -88,7 +92,6 @@
             </div>
         </div>
         <div class="post">
-            <div class="post-thumbnail" style="background-image: url('https://via.placeholder.com/300x180');"></div>
             <div class="post-content">
                 <div class="post-title">Interesting Post Title 3</div>
                 <div class="post-description">This third post provides some exciting content and a teaser of what readers can expect.</div>
@@ -101,7 +104,6 @@
             </div>
         </div>
         <div class="post">
-            <div class="post-thumbnail" style="background-image: url('https://via.placeholder.com/300x180');"></div>
             <div class="post-content">
                 <div class="post-title">Interesting Post Title 3</div>
                 <div class="post-description">This third post provides some exciting content and a teaser of what readers can expect.</div>
@@ -122,7 +124,8 @@
         <button class="active">1</button>
         <button>2</button>
         <button>3</button>
-        <button>Next</button>
+        <button>다음</button>
+        <a href="write"><button>작성하기</button></a>
     </div>
 </div>
 

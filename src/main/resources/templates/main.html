@@ -10,8 +10,18 @@
 
 <!-- Top Bar -->
 <div class="top-bar">
+<!--    <div class="logo">-->
+<!--       <a href="/"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo"></a>-->
+<!--    </div>-->
     <div class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+                <rect width="120" height="40" rx="8" fill="#000000"></rect>
+                <text x="20" y="27" font-family="Arial, sans-serif" font-size="18" fill="white" font-weight="bold">
+                    HyukWeb
+                </text>
+            </svg>
+        </a>
     </div>
 
     <div class="search-bar">
@@ -25,25 +35,28 @@
 
 <!-- Sidebar -->
 <div class="sidebar">
+    <a href ="/login"><li><span>로그인</span></li></a>
     <ul>
         <li><span>김재혁</span></li>
         <li><span>1998.08.02</span></li>
         <li><span>JAVA 웹 개발자</span></li>
-
-<!--        <li><span></span></li>-->
-<!--        <li><span>History</span></li>-->
+        <!--        <li><span></span></li>-->
+        <!--        <li><span>History</span></li>-->
     </ul>
 </div>
+
 
 <!-- Main Content (Video Feed) -->
 <div class="main-content">
     <div class="video-grid">
         <div class="video-card">
-            <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180');"></div>
-            <div class="video-info">
-                <div class="video-title">Video Title 1</div>
-                <div class="video-channel">Channel Name</div>
-            </div>
+            <a href="board">
+                <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180');"></div>
+                <div class="video-info">
+                    <div class="video-title">게시판 만들기</div>
+                    <div class="video-channel">Java,Springboot 게시판</div>
+                </div>
+            </a>
         </div>
 
         <div class="video-card">

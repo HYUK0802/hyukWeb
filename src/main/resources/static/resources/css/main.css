@@ -172,3 +172,12 @@
                 height: 120px;
             }
         }
+        .logo {
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0;
+                }
+                .logo svg {
+                    height: 40px;
+                    width: auto;
+                }
