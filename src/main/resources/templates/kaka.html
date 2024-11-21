@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오톡 모바일 홈 화면</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* 중앙에 고정된 레이아웃 설정 */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 500px; /* 폰 화면 크기 */
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto; /* 중앙 정렬 */
+            background-color: white;
+            border: 1px solid #ddd; /* 화면 테두리 */
+        }
+
+        /* 헤더 */
+        .header {
+            background-color: #ffeb33;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 18px;
+            color: black;
+        }
+
+        .header .profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            background-image: url('https://via.placeholder.com/40');
+            background-size: cover;
+        }
+
+        /* 친구 목록 */
+        .friends-list {
+            padding: 10px 20px;
+            flex-grow: 1; /* 친구 목록이 중간에 꽉 차게 */
+            overflow-y: auto; /* 친구 목록이 많으면 스크롤 가능 */
+        }
+
+        .friend {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .friend img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .friend .name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .friend .status {
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* 하단 네비게이션 */
+        .bottom-nav {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-nav a {
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .bottom-nav a.active {
+            color: #000;
+        }
+
+        .bottom-nav a i {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        /* 미디어 쿼리 */
+        @media only screen and (max-width: 600px) {
+            .friend img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .friend .name {
+                font-size: 14px;
+            }
+
+            .header h1 {
+                font-size: 16px;
+            }
+
+            .header .profile {
+                width: 35px;
+                height: 35px;
+            }
+
+            .bottom-nav a i {
+                font-size: 20px;
+            }
+
+            .bottom-nav a {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 헤더 -->
+    <div class="header">
+        <h1>친구</h1>
+        <div class="profile"></div>
+    </div>
+
+    <!-- 친구 목록 -->
+    <div class="friends-list">
+        <div class="friend">
+            <img src="https://via.placeholder.com/50" alt="프로필 이미지">
+            <div>
+                <div class="name">홍길동</div>
+                <div class="status">상태 메시지</div>
+            </div>
+        </div>
+        <div class="friend">
+            <img src="https://via.placeholder.com/50" alt="프로필 이미지">
+            <div>
+                <div class="name">김철수</div>
+                <div class="status">상태 메시지</div>
+            </div>
+        </div>
+        
+        <!-- 추가 친구들 -->
+    </div>
+
+    <!-- 하단 네비게이션 -->
+    <div class="bottom-nav">
+        <a href="#" class="active">
+            <i>👤</i>
+            친구
+        </a>
+        <a href="#">
+            <i>💬</i>
+            채팅
+        </a>
+        <a href="#">
+            <i>🔍</i>
+            찾기
+        </a>
+        <a href="#">
+            <i>⚙️</i>
+            설정
+        </a>
+    </div>
+</div>
+</body>
+</html>
